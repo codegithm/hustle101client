@@ -1,4 +1,65 @@
-<svg width="375" height="342" viewBox="0 0 375 342" fill="none" xmlns="http://www.w3.org/2000/svg">
+import React from "react";
+import { Box, Container, Typography, makeStyles, Button } from "@material-ui/core";
+
+const useStyles = makeStyles({
+    content: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        position: "absolute",
+        top: "130px",
+        left: "10px"
+    },
+    heading : {
+        fontSize: "20px",
+        fontWeight: "bold"
+    },
+    svg: {
+        display: "flex",
+        alignItems: "center",
+        width: "100%",
+        height: "50%",
+        position: "absolute",
+        bottom: "0px",
+        left: "0px"
+    },
+    list: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    },
+    btn: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "absolute",
+        bottom: "10px"
+    },
+    center_btn: {
+        display: "flex",
+        justifyContent: "center",
+    }
+})
+const Home = (props) =>{
+    const classes = useStyles()
+    return(
+        <Container>
+            <div className={classes.content}>
+            <Typography className={classes.heading} variant="h1">
+                Looking for a developer?
+                Find great Candidates fast
+            </Typography>
+            <Box className={classes.list}>
+            <Typography>01 Create your HUSTLER101 client profile</Typography>
+            <Typography>02 Connect to your desired freelancer’s dev</Typography>
+            <Typography>03 Flexible Engagements</Typography>
+            <Typography>04 Seamless Hiring</Typography>
+            </Box>
+            </div>
+            <Box className={classes.center_btn}>
+            <svg className={classes.svg} width="375" height="342" viewBox="0 0 375 342" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M178.036 305.515H-30.5631C-32.1972 305.512 -33.7635 304.861 -34.918 303.704C-36.0725 302.548 -36.7209 300.981 -36.7209 299.346V6.11462C-36.7067 4.48984 -36.052 2.93629 -34.899 1.79141C-33.746 0.646527 -32.1879 0.00278333 -30.5631 0H178.036C179.672 0 181.241 0.649908 182.398 1.80675C183.555 2.9636 184.205 4.53261 184.205 6.16864V299.346C184.205 300.982 183.555 302.551 182.398 303.708C181.241 304.865 179.672 305.515 178.036 305.515ZM-30.5631 0.216065C-32.1256 0.218927 -33.6231 0.841641 -34.727 1.94753C-35.8309 3.05341 -36.4508 4.5521 -36.4508 6.11462V299.346C-36.4508 300.909 -35.8309 302.408 -34.727 303.513C-33.6231 304.619 -32.1256 305.242 -30.5631 305.245H178.036C179.6 305.242 181.098 304.62 182.204 303.514C183.31 302.409 183.932 300.91 183.935 299.346V6.11462C183.932 4.5511 183.31 3.05244 182.204 1.94687C181.098 0.84129 179.6 0.218921 178.036 0.216065H-30.5631Z" fill="#E0E0E0"/>
                 <path d="M411.721 305.515H203.111C201.475 305.512 199.908 304.861 198.752 303.705C197.596 302.549 196.945 300.982 196.942 299.346V6.11462C196.959 4.48886 197.616 2.93532 198.771 1.79073C199.925 0.64615 201.485 0.00275297 203.111 0H411.721C413.344 0.00562253 414.899 0.650623 416.05 1.7952C417.2 2.93978 417.854 4.49171 417.868 6.11462V299.346C417.868 300.979 417.221 302.544 416.069 303.701C414.916 304.857 413.353 305.509 411.721 305.515ZM203.111 0.216065C201.547 0.218921 200.048 0.84129 198.943 1.94687C197.837 3.05244 197.215 4.5511 197.212 6.11462V299.346C197.215 300.91 197.837 302.409 198.943 303.514C200.048 304.62 201.547 305.242 203.111 305.245H411.721C413.284 305.242 414.783 304.62 415.888 303.514C416.994 302.409 417.616 300.91 417.619 299.346V6.11462C417.616 4.5511 416.994 3.05244 415.888 1.94687C414.783 0.84129 413.284 0.218921 411.721 0.216065H203.111Z" fill="#E0E0E0"/>
                 <path d="M265.315 222.049H214.151V353.697H265.315V222.049Z" fill="#E0E0E0"/>
@@ -162,3 +223,11 @@
                 <path d="M132.004 197.958L138.14 195.873L137.178 203.252C137.178 203.252 134.759 204.332 131.626 201.61L128.633 199.698L130.988 198.412C131.311 198.228 131.651 198.076 132.004 197.958Z" fill="#E4897B"/>
                 <path d="M142.429 195.852L140.549 202.301L137.178 203.241L138.14 195.873L142.429 195.852Z" fill="#E4897B"/>
             </svg>
+
+                <Button onClick={props.next} className={classes.btn} variant="contained" color="secondary">Next</Button>
+            </Box>
+        </Container>
+    )
+}
+
+export default Home
